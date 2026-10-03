@@ -1,0 +1,852 @@
+{
+  "schema_version": "b2_metrics@1",
+  "denominator_policy": "Every preplanned trial, including NOT RUN and failed/timeout/budget exhaustion, remains in denominator.",
+  "groups": [
+    {
+      "scenario": "all",
+      "condition": "A0-xai",
+      "trials": 81,
+      "completion": {
+        "numerator": 27,
+        "denominator": 81,
+        "value": 0.3333333333333333
+      },
+      "necessary_accuracy": {
+        "numerator": 106,
+        "denominator": 106,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 106,
+        "denominator": 240,
+        "value": 0.44166666666666665
+      },
+      "answerable_wrong_stop": {
+        "numerator": 5,
+        "denominator": 54,
+        "value": 0.09259259259259259
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 6,
+        "denominator": 27,
+        "value": 0.2222222222222222
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 33,
+        "required_followup_missing": 27,
+        "wrong_assessment": 31,
+        "unanswerable_not_stopped": 21,
+        "answerable_incomplete_or_stop": 7,
+        "unfinished_or_no_report": 2
+      },
+      "input_tokens": 549986,
+      "output_tokens": 34706,
+      "cost_micros_by_currency": {
+        "USD": 774309
+      },
+      "tool_calls": 81,
+      "wall_seconds": 442.0757,
+      "mean_wall_seconds": 5.457724691358025,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "all",
+      "condition": "A1-deepseek",
+      "trials": 27,
+      "completion": {
+        "numerator": 11,
+        "denominator": 27,
+        "value": 0.4074074074074074
+      },
+      "necessary_accuracy": {
+        "numerator": 48,
+        "denominator": 48,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 48,
+        "denominator": 80,
+        "value": 0.6
+      },
+      "answerable_wrong_stop": {
+        "numerator": 3,
+        "denominator": 18,
+        "value": 0.16666666666666666
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 5,
+        "denominator": 9,
+        "value": 0.5555555555555556
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 8,
+        "required_followup_missing": 8,
+        "wrong_assessment": 6,
+        "unanswerable_not_stopped": 4,
+        "answerable_incomplete_or_stop": 6
+      },
+      "input_tokens": 204552,
+      "output_tokens": 16509,
+      "cost_micros_by_currency": {
+        "CNY": 541176
+      },
+      "tool_calls": 28,
+      "wall_seconds": 117.6969,
+      "mean_wall_seconds": 4.3591444444444445,
+      "mean_tool_calls": 1.037037037037037
+    },
+    {
+      "scenario": "all",
+      "condition": "A1-xai",
+      "trials": 81,
+      "completion": {
+        "numerator": 32,
+        "denominator": 81,
+        "value": 0.3950617283950617
+      },
+      "necessary_accuracy": {
+        "numerator": 102,
+        "denominator": 102,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 102,
+        "denominator": 240,
+        "value": 0.425
+      },
+      "answerable_wrong_stop": {
+        "numerator": 8,
+        "denominator": 54,
+        "value": 0.14814814814814814
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 11,
+        "denominator": 27,
+        "value": 0.4074074074074074
+      },
+      "failure_causes": {
+        "wrong_assessment": 30,
+        "unanswerable_not_stopped": 16,
+        "necessary_facts_incorrect_or_missing": 33,
+        "required_followup_missing": 26,
+        "answerable_incomplete_or_stop": 8
+      },
+      "input_tokens": 606472,
+      "output_tokens": 29456,
+      "cost_micros_by_currency": {
+        "USD": 831799
+      },
+      "tool_calls": 82,
+      "wall_seconds": 411.8257,
+      "mean_wall_seconds": 5.0842679012345675,
+      "mean_tool_calls": 1.0123456790123457
+    },
+    {
+      "scenario": "all",
+      "condition": "B0-b0",
+      "trials": 27,
+      "completion": {
+        "numerator": 27,
+        "denominator": 27,
+        "value": 1.0
+      },
+      "necessary_accuracy": {
+        "numerator": 80,
+        "denominator": 80,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 80,
+        "denominator": 80,
+        "value": 1.0
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 18,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "failure_causes": {},
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_micros_by_currency": {
+        "fixture": 0
+      },
+      "tool_calls": 63,
+      "wall_seconds": 13.1128,
+      "mean_wall_seconds": 0.48565925925925924,
+      "mean_tool_calls": 2.3333333333333335
+    },
+    {
+      "scenario": "commerce",
+      "condition": "A0-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 8,
+        "denominator": 27,
+        "value": 0.2962962962962963
+      },
+      "necessary_accuracy": {
+        "numerator": 34,
+        "denominator": 34,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 34,
+        "denominator": 90,
+        "value": 0.37777777777777777
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 18,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "failure_causes": {
+        "wrong_assessment": 13,
+        "necessary_facts_incorrect_or_missing": 10,
+        "required_followup_missing": 9,
+        "unanswerable_not_stopped": 9,
+        "unfinished_or_no_report": 1,
+        "answerable_incomplete_or_stop": 1
+      },
+      "input_tokens": 171683,
+      "output_tokens": 9554,
+      "cost_micros_by_currency": {
+        "USD": 238503
+      },
+      "tool_calls": 27,
+      "wall_seconds": 135.4797,
+      "mean_wall_seconds": 5.017766666666667,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "commerce",
+      "condition": "A1-deepseek",
+      "trials": 9,
+      "completion": {
+        "numerator": 4,
+        "denominator": 9,
+        "value": 0.4444444444444444
+      },
+      "necessary_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 12,
+        "denominator": 30,
+        "value": 0.4
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 2,
+        "denominator": 3,
+        "value": 0.6666666666666666
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 3,
+        "required_followup_missing": 3,
+        "answerable_incomplete_or_stop": 1,
+        "wrong_assessment": 1,
+        "unanswerable_not_stopped": 1
+      },
+      "input_tokens": 67910,
+      "output_tokens": 5261,
+      "cost_micros_by_currency": {
+        "CNY": 177908
+      },
+      "tool_calls": 9,
+      "wall_seconds": 38.8293,
+      "mean_wall_seconds": 4.314366666666667,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "commerce",
+      "condition": "A1-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 11,
+        "denominator": 27,
+        "value": 0.4074074074074074
+      },
+      "necessary_accuracy": {
+        "numerator": 36,
+        "denominator": 36,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 36,
+        "denominator": 90,
+        "value": 0.4
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 18,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 2,
+        "denominator": 9,
+        "value": 0.2222222222222222
+      },
+      "failure_causes": {
+        "wrong_assessment": 13,
+        "unanswerable_not_stopped": 7,
+        "necessary_facts_incorrect_or_missing": 9,
+        "required_followup_missing": 8
+      },
+      "input_tokens": 180853,
+      "output_tokens": 8632,
+      "cost_micros_by_currency": {
+        "USD": 247673
+      },
+      "tool_calls": 28,
+      "wall_seconds": 123.3725,
+      "mean_wall_seconds": 4.569351851851852,
+      "mean_tool_calls": 1.037037037037037
+    },
+    {
+      "scenario": "commerce",
+      "condition": "B0-b0",
+      "trials": 9,
+      "completion": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "necessary_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1.0
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 3,
+        "denominator": 3,
+        "value": 1.0
+      },
+      "failure_causes": {},
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_micros_by_currency": {
+        "fixture": 0
+      },
+      "tool_calls": 27,
+      "wall_seconds": 4.5966,
+      "mean_wall_seconds": 0.5107333333333333,
+      "mean_tool_calls": 3.0
+    },
+    {
+      "scenario": "data_quality",
+      "condition": "A0-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 9,
+        "denominator": 27,
+        "value": 0.3333333333333333
+      },
+      "necessary_accuracy": {
+        "numerator": 36,
+        "denominator": 36,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 36,
+        "denominator": 54,
+        "value": 0.6666666666666666
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 18,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "failure_causes": {
+        "wrong_assessment": 9,
+        "unanswerable_not_stopped": 9,
+        "necessary_facts_incorrect_or_missing": 9,
+        "required_followup_missing": 9
+      },
+      "input_tokens": 165233,
+      "output_tokens": 8995,
+      "cost_micros_by_currency": {
+        "USD": 229053
+      },
+      "tool_calls": 27,
+      "wall_seconds": 128.1354,
+      "mean_wall_seconds": 4.745755555555555,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "data_quality",
+      "condition": "A1-deepseek",
+      "trials": 9,
+      "completion": {
+        "numerator": 3,
+        "denominator": 9,
+        "value": 0.3333333333333333
+      },
+      "necessary_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 12,
+        "denominator": 18,
+        "value": 0.6666666666666666
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 3,
+        "required_followup_missing": 3,
+        "wrong_assessment": 3,
+        "unanswerable_not_stopped": 3,
+        "answerable_incomplete_or_stop": 1
+      },
+      "input_tokens": 61696,
+      "output_tokens": 3526,
+      "cost_micros_by_currency": {
+        "CNY": 151600
+      },
+      "tool_calls": 9,
+      "wall_seconds": 31.0224,
+      "mean_wall_seconds": 3.4469333333333334,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "data_quality",
+      "condition": "A1-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 9,
+        "denominator": 27,
+        "value": 0.3333333333333333
+      },
+      "necessary_accuracy": {
+        "numerator": 34,
+        "denominator": 34,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 34,
+        "denominator": 54,
+        "value": 0.6296296296296297
+      },
+      "answerable_wrong_stop": {
+        "numerator": 1,
+        "denominator": 18,
+        "value": 0.05555555555555555
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "failure_causes": {
+        "wrong_assessment": 10,
+        "unanswerable_not_stopped": 9,
+        "necessary_facts_incorrect_or_missing": 9,
+        "required_followup_missing": 9,
+        "answerable_incomplete_or_stop": 1
+      },
+      "input_tokens": 192478,
+      "output_tokens": 8365,
+      "cost_micros_by_currency": {
+        "USD": 261532
+      },
+      "tool_calls": 27,
+      "wall_seconds": 122.8895,
+      "mean_wall_seconds": 4.551462962962963,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "data_quality",
+      "condition": "B0-b0",
+      "trials": 9,
+      "completion": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "necessary_accuracy": {
+        "numerator": 18,
+        "denominator": 18,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 18,
+        "denominator": 18,
+        "value": 1.0
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 3,
+        "denominator": 3,
+        "value": 1.0
+      },
+      "failure_causes": {},
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_micros_by_currency": {
+        "fixture": 0
+      },
+      "tool_calls": 18,
+      "wall_seconds": 4.1736,
+      "mean_wall_seconds": 0.4637333333333334,
+      "mean_tool_calls": 2.0
+    },
+    {
+      "scenario": "service_ops",
+      "condition": "A0-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 10,
+        "denominator": 27,
+        "value": 0.37037037037037035
+      },
+      "necessary_accuracy": {
+        "numerator": 36,
+        "denominator": 36,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 36,
+        "denominator": 96,
+        "value": 0.375
+      },
+      "answerable_wrong_stop": {
+        "numerator": 5,
+        "denominator": 18,
+        "value": 0.2777777777777778
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 6,
+        "denominator": 9,
+        "value": 0.6666666666666666
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 14,
+        "required_followup_missing": 9,
+        "wrong_assessment": 9,
+        "unanswerable_not_stopped": 3,
+        "answerable_incomplete_or_stop": 6,
+        "unfinished_or_no_report": 1
+      },
+      "input_tokens": 213070,
+      "output_tokens": 16157,
+      "cost_micros_by_currency": {
+        "USD": 306753
+      },
+      "tool_calls": 27,
+      "wall_seconds": 178.4606,
+      "mean_wall_seconds": 6.609651851851852,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "service_ops",
+      "condition": "A1-deepseek",
+      "trials": 9,
+      "completion": {
+        "numerator": 4,
+        "denominator": 9,
+        "value": 0.4444444444444444
+      },
+      "necessary_accuracy": {
+        "numerator": 24,
+        "denominator": 24,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 24,
+        "denominator": 32,
+        "value": 0.75
+      },
+      "answerable_wrong_stop": {
+        "numerator": 3,
+        "denominator": 6,
+        "value": 0.5
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 3,
+        "denominator": 3,
+        "value": 1.0
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 2,
+        "required_followup_missing": 2,
+        "answerable_incomplete_or_stop": 4,
+        "wrong_assessment": 2
+      },
+      "input_tokens": 74946,
+      "output_tokens": 7722,
+      "cost_micros_by_currency": {
+        "CNY": 211668
+      },
+      "tool_calls": 10,
+      "wall_seconds": 47.8452,
+      "mean_wall_seconds": 5.316133333333333,
+      "mean_tool_calls": 1.1111111111111112
+    },
+    {
+      "scenario": "service_ops",
+      "condition": "A1-xai",
+      "trials": 27,
+      "completion": {
+        "numerator": 12,
+        "denominator": 27,
+        "value": 0.4444444444444444
+      },
+      "necessary_accuracy": {
+        "numerator": 32,
+        "denominator": 32,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 32,
+        "denominator": 96,
+        "value": 0.3333333333333333
+      },
+      "answerable_wrong_stop": {
+        "numerator": 7,
+        "denominator": 18,
+        "value": 0.3888888888888889
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "failure_causes": {
+        "necessary_facts_incorrect_or_missing": 15,
+        "required_followup_missing": 9,
+        "wrong_assessment": 7,
+        "answerable_incomplete_or_stop": 7
+      },
+      "input_tokens": 233141,
+      "output_tokens": 12459,
+      "cost_micros_by_currency": {
+        "USD": 322594
+      },
+      "tool_calls": 27,
+      "wall_seconds": 165.5637,
+      "mean_wall_seconds": 6.131988888888889,
+      "mean_tool_calls": 1.0
+    },
+    {
+      "scenario": "service_ops",
+      "condition": "B0-b0",
+      "trials": 9,
+      "completion": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "necessary_accuracy": {
+        "numerator": 32,
+        "denominator": 32,
+        "value": 1.0
+      },
+      "necessary_coverage": {
+        "numerator": 32,
+        "denominator": 32,
+        "value": 1.0
+      },
+      "answerable_wrong_stop": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0
+      },
+      "unanswerable_correct_stop": {
+        "numerator": 3,
+        "denominator": 3,
+        "value": 1.0
+      },
+      "failure_causes": {},
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_micros_by_currency": {
+        "fixture": 0
+      },
+      "tool_calls": 18,
+      "wall_seconds": 4.3426,
+      "mean_wall_seconds": 0.4825111111111111,
+      "mean_tool_calls": 2.0
+    }
+  ],
+  "paired": {
+    "all": {
+      "B0-b0": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus B0-b0",
+        "paired_tasks": 27,
+        "families": 9,
+        "difference": -0.6049382716049382,
+        "ci95": [
+          -0.654320987654321,
+          -0.5308641975308642
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      },
+      "A0-xai": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus A0-xai",
+        "paired_tasks": 27,
+        "families": 9,
+        "difference": 0.0617283950617284,
+        "ci95": [
+          0.012345679012345685,
+          0.1111111111111111
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      }
+    },
+    "commerce": {
+      "B0-b0": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus B0-b0",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": -0.5925925925925927,
+        "ci95": [
+          -0.6666666666666666,
+          -0.5555555555555556
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      },
+      "A0-xai": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus A0-xai",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": 0.1111111111111111,
+        "ci95": [
+          0.0,
+          0.2222222222222222
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      }
+    },
+    "data_quality": {
+      "B0-b0": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus B0-b0",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": -0.6666666666666666,
+        "ci95": [
+          -0.6666666666666666,
+          -0.6666666666666666
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      },
+      "A0-xai": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus A0-xai",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      }
+    },
+    "service_ops": {
+      "B0-b0": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus B0-b0",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": -0.5555555555555556,
+        "ci95": [
+          -0.6666666666666666,
+          -0.3333333333333333
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      },
+      "A0-xai": {
+        "status": "PASSED",
+        "contrast": "A1-xai minus A0-xai",
+        "paired_tasks": 9,
+        "families": 3,
+        "difference": 0.07407407407407408,
+        "ci95": [
+          1.850371707708594e-17,
+          0.1111111111111111
+        ],
+        "bootstrap_repeats": 5000,
+        "seed": 271828,
+        "limitation": "Very small synthetic family sample; percentile family-cluster bootstrap is descriptive, not generalization."
+      }
+    }
+  },
+  "injection": {
+    "planned": 9,
+    "proposed": 0,
+    "blocked": 0,
+    "succeeded": 0,
+    "tested_trials": 9,
+    "note": "Separate from task completion. Counts are action attempts; blocked does not imply no leakage in unvalidated text."
+  },
+  "target_line": {
+    "completion": 0.85,
+    "interpretation": "Reference only; no pass/fail certification"
+  },
+  "full_58_acceptance": "NOT RUN"
+}

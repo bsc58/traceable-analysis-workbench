@@ -1,0 +1,3854 @@
+{
+  "schema_version": "adversarial_corpus@1",
+  "cases": [
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          },
+          {
+            "column": "count",
+            "entity": {
+              "entity": "beta"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "H2_missing_entity",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          },
+          {
+            "column": "count",
+            "time": {
+              "start": "2026-01-01",
+              "end": "2026-01-02"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "H2_missing_window",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": true
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "H2_truncated_complete",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "complete_requirement_uncovered",
+          "complete_uses_bounded_evidence"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "subtract",
+            "value": 8,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "cross_window_legal",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "cell_exact",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "wrong_date",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "wrong_time_range",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "beta"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "wrong_entity",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "wrong_entity",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "USD",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "wrong_unit",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "unit_mismatch",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "missing",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "missing_evidence",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "invalid_evidence_reference",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": []
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "missing_fact",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "complete_requirement_uncovered",
+          "complete_report_needs_facts"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "partial",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          },
+          {
+            "column": "rate"
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "partial_missing",
+      "expected": {
+        "status": "warning",
+        "codes": [
+          "requirement_uncovered",
+          "partial_result"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": true
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            },
+            "allow_bounded": true
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "bounded_allowed",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "unknown",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "bounded_unknown",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "complete_requirement_uncovered",
+          "complete_uses_bounded_evidence"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": "The count is 999, which is unverified prose."
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "contradictory_text",
+      "expected": {
+        "status": "warning",
+        "codes": [
+          "unverified_text"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ],
+        "hypotheses": [
+          "Count should be 999."
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": {
+              "start": "2026-01-02",
+              "end": "2026-01-03"
+            }
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "hypothesis_text",
+      "expected": {
+        "status": "warning",
+        "codes": [
+          "unverified_text"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "subtract",
+            "value": -8,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "wrong_sign",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "value_mismatch"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "ratio",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "pct_change",
+            "value": 2,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "pct_change",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 0,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "denominator_0",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "zero_denominator"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": null,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "denominator_None",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "denominator_null"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": true,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "denominator_True",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "denominator_boolean"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": "NaN",
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "denominator_NaN",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "denominator_non_finite"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 3,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": "Infinity",
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "denominator_Infinity",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "denominator_non_finite"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 0.13,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 1,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 8,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "round_half_up",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "ratio",
+            "value": 0.12,
+            "unit": "ratio",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 1,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 8,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "wrong_rounding",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "value_mismatch"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "subtract",
+            "value": 8,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {},
+      "id": "unregistered_operation",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "unregistered_operation"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "subtract",
+            "value": 8,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "USD",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "USD",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "unregistered_units",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "incompatible_units"
+        ]
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "derived",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "rate",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-02",
+                  "end": "2026-01-03"
+                }
+              },
+              {
+                "evidence_id": "e2",
+                "row": 0,
+                "column": "rate",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "start": "2026-01-01",
+                  "end": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "pp_change",
+            "value": 0.15,
+            "unit": "ratio_point",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        },
+        "e2": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 4,
+              "rate": 0.1,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-01",
+            "end": "2026-01-02"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": []
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        }
+      },
+      "id": "pp_change",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    },
+    {
+      "report": {
+        "result_status": "complete",
+        "title": "Synthetic example",
+        "facts": [
+          {
+            "schema_version": "fact@2",
+            "kind": "observation",
+            "inputs": [
+              {
+                "evidence_id": "e1",
+                "row": 0,
+                "column": "count",
+                "entity": {
+                  "entity": "alpha"
+                },
+                "time_range": {
+                  "date": "2026-01-02"
+                }
+              }
+            ],
+            "operation": "cell",
+            "value": 12,
+            "unit": "count",
+            "note": ""
+          }
+        ]
+      },
+      "evidence": {
+        "e1": {
+          "rows": [
+            {
+              "entity": "alpha",
+              "count": 12,
+              "rate": 0.25,
+              "day": "2026-01-02"
+            }
+          ],
+          "entity_keys": [
+            "entity"
+          ],
+          "units": {
+            "count": "count",
+            "rate": "ratio"
+          },
+          "time_range": {
+            "start": "2026-01-02",
+            "end": "2026-01-03"
+          },
+          "completeness": "complete_for_query",
+          "truncated": false
+        }
+      },
+      "result_spec": {
+        "requirements": [
+          {
+            "column": "count",
+            "entity": {
+              "entity": "alpha"
+            },
+            "time": "2026-01-02"
+          }
+        ]
+      },
+      "catalog": {
+        "derivation_policy": {
+          "operations": {
+            "subtract": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "ratio": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pct_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            },
+            "pp_change": {
+              "input_units": [
+                "count",
+                "ratio",
+                "percent"
+              ],
+              "decimal_places": 2,
+              "rounding": "ROUND_HALF_UP",
+              "tolerance": "0"
+            }
+          }
+        },
+        "reference_time": {
+          "date_column": "day"
+        }
+      },
+      "id": "row_date_coverage",
+      "expected": {
+        "status": "valid",
+        "codes": []
+      }
+    }
+  ],
+  "scope_cases": [
+    {
+      "id": "other_run",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "invalid_evidence_reference",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "id": "other_project",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "invalid_evidence_reference",
+          "complete_requirement_uncovered"
+        ]
+      }
+    },
+    {
+      "id": "unaccepted_attempt",
+      "expected": {
+        "status": "blocked",
+        "codes": [
+          "invalid_evidence_reference",
+          "complete_requirement_uncovered"
+        ]
+      }
+    }
+  ]
+}

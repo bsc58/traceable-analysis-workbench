@@ -1,0 +1,10 @@
+{
+  "schema_version": "GraderSpec@1",
+  "version": "commerce_cohort_delta@1",
+  "applicable_task": "Two synthetic cohorts: orders, distinct refunded orders, refund rates and current-minus-baseline rate change",
+  "inputs": ["completed_run_export", "private_reference_answers"],
+  "deterministic_checks": ["terminal SUCCEEDED export", "six observation cells matched by column and window", "registered pp_change fact with ordered current/baseline inputs", "exact units", "numeric tolerance"],
+  "tolerance": "0.000000005",
+  "error_categories": ["incomplete_export", "missing_answer", "ambiguous_answer", "wrong_unit", "wrong_value", "invalid_number"],
+  "limitations": ["Synthetic fixture rehearsal only", "No model quality score", "No causal or prose evaluation"]
+}

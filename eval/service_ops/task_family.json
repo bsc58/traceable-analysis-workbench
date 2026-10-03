@@ -1,0 +1,143 @@
+{
+  "schema_version": "task_family@1",
+  "id": "service_ops_investigation@1",
+  "origin": "synthetic fixture, non-model rehearsal",
+  "question": "Investigate the admitted scope; compare observations and stop when evidence is insufficient.",
+  "parameters": {
+    "service": "edge",
+    "current_start": "2026-01-02T00:00:00Z",
+    "current_end": "2026-01-02T01:00:00Z",
+    "baseline_start": "2026-01-01T00:00:00Z",
+    "baseline_end": "2026-01-01T01:00:00Z",
+    "as_of": "2026-01-02T01:00:00Z"
+  },
+  "result_spec": {
+    "schema_version": "result_spec@1",
+    "requirements": [
+      {
+        "column": "requests",
+        "entity": {
+          "window": "current",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-02T00:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "errored_requests",
+        "entity": {
+          "window": "current",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-02T00:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "error_rate",
+        "entity": {
+          "window": "current",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-02T00:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "mean_duration",
+        "entity": {
+          "window": "current",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-02T00:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "requests",
+        "entity": {
+          "window": "baseline",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-01T00:00:00Z",
+          "end": "2026-01-01T01:00:00Z"
+        }
+      },
+      {
+        "column": "errored_requests",
+        "entity": {
+          "window": "baseline",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-01T00:00:00Z",
+          "end": "2026-01-01T01:00:00Z"
+        }
+      },
+      {
+        "column": "error_rate",
+        "entity": {
+          "window": "baseline",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-01T00:00:00Z",
+          "end": "2026-01-01T01:00:00Z"
+        }
+      },
+      {
+        "column": "mean_duration",
+        "entity": {
+          "window": "baseline",
+          "service": "edge"
+        },
+        "time": {
+          "start": "2026-01-01T00:00:00Z",
+          "end": "2026-01-01T01:00:00Z"
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "case_00",
+      "generator_selection": 0
+    },
+    {
+      "id": "case_01",
+      "generator_selection": 1
+    },
+    {
+      "id": "case_02",
+      "generator_selection": 2
+    },
+    {
+      "id": "case_03",
+      "generator_selection": 3
+    },
+    {
+      "id": "case_04",
+      "generator_selection": 4
+    }
+  ],
+  "counterfactual_pairs": [
+    [
+      "case_00",
+      "case_01"
+    ],
+    [
+      "case_02",
+      "case_03"
+    ]
+  ],
+  "first_query": "service_overview@1",
+  "followup_query": "service_context@1",
+  "isolation": "Only overview data changes inside each pair. Follow-up semantic rows and task/Skill remain identical; opaque content hashes may differ. Selection is trusted evaluation configuration, never a tool parameter.",
+  "answer_location": "External owner-controlled evaluation directory; excluded from source and packages"
+}

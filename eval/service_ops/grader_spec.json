@@ -1,0 +1,34 @@
+{
+  "schema_version": "GraderSpec@1",
+  "version": "service_ops_investigation@1",
+  "inputs": [
+    "completed_run_export",
+    "private_reference_answers"
+  ],
+  "deterministic_checks": [
+    "terminal SUCCEEDED export",
+    "exact result_status from independent reference",
+    "required observations matched by column, entity and time",
+    "exact units and types",
+    "numeric tolerance for registered derived operations",
+    "reject missing or ambiguous observations",
+    "reject complete when evidence is bounded/unknown"
+  ],
+  "tolerance": "0.000000005",
+  "error_categories": [
+    "incomplete_export",
+    "wrong_result_status",
+    "missing_answer",
+    "ambiguous_answer",
+    "wrong_unit",
+    "wrong_value",
+    "invalid_number"
+  ],
+  "counterfactual_check": "Both trials retained; first-query semantic result differs and follow-up semantic rows match. No quality score inferred.",
+  "limitations": [
+    "Fixtures, not model evaluations",
+    "Runtime validation is not causal/semantic correctness",
+    "Prose requires independent review; never treated as validated",
+    "No answers contained in this specification"
+  ]
+}

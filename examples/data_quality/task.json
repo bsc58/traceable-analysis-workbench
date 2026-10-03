@@ -1,0 +1,84 @@
+{
+  "question": "Investigate the admitted scope; compare observations and stop when evidence is insufficient.",
+  "parameters": {
+    "dataset": "orders",
+    "as_of": "2026-01-02T01:00:00Z",
+    "max_age_seconds": 3600
+  },
+  "result_spec": {
+    "schema_version": "result_spec@1",
+    "requirements": [
+      {
+        "column": "rows",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "checked_records",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "failed_records",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "failure_rate",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "freshness_seconds",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "version_changed",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "upstream_rows",
+        "entity": {
+          "dataset": "orders",
+          "upstream": "raw"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      }
+    ]
+  }
+}

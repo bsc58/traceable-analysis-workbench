@@ -1,0 +1,123 @@
+{
+  "schema_version": "task_family@1",
+  "id": "data_quality_investigation@1",
+  "origin": "synthetic fixture, non-model rehearsal",
+  "question": "Investigate the admitted scope; compare observations and stop when evidence is insufficient.",
+  "parameters": {
+    "dataset": "orders",
+    "as_of": "2026-01-02T01:00:00Z",
+    "max_age_seconds": 3600
+  },
+  "result_spec": {
+    "schema_version": "result_spec@1",
+    "requirements": [
+      {
+        "column": "rows",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "checked_records",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "failed_records",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "failure_rate",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "freshness_seconds",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "version_changed",
+        "entity": {
+          "dataset": "orders"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      },
+      {
+        "column": "upstream_rows",
+        "entity": {
+          "dataset": "orders",
+          "upstream": "raw"
+        },
+        "time": {
+          "start": "2026-01-02T01:00:00Z",
+          "end": "2026-01-02T01:00:00Z"
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "case_00",
+      "generator_selection": 0
+    },
+    {
+      "id": "case_01",
+      "generator_selection": 1
+    },
+    {
+      "id": "case_02",
+      "generator_selection": 2
+    },
+    {
+      "id": "case_03",
+      "generator_selection": 3
+    },
+    {
+      "id": "case_04",
+      "generator_selection": 4
+    }
+  ],
+  "counterfactual_pairs": [
+    [
+      "case_00",
+      "case_01"
+    ],
+    [
+      "case_02",
+      "case_03"
+    ]
+  ],
+  "first_query": "quality_overview@1",
+  "followup_query": "quality_dependencies@1",
+  "isolation": "Only overview data changes inside each pair. Follow-up semantic rows and task/Skill remain identical; opaque content hashes may differ. Selection is trusted evaluation configuration, never a tool parameter.",
+  "answer_location": "External owner-controlled evaluation directory; excluded from source and packages"
+}

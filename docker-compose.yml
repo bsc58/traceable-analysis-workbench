@@ -1,0 +1,52 @@
+# Isolated synthetic demo only. Container startup verification: NOT RUN.
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_DB: workbench_demo
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets: [db_password]
+    volumes: [demo_pg:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U demo -d workbench_demo"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  api:
+    build: .
+    command: [python, scripts/demo_runtime.py, api]
+    secrets: [db_password]
+    volumes: [demo_state:/state]
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "from pathlib import Path; assert Path('/state/ready').exists()"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  worker:
+    build: .
+    command: [python, scripts/demo_runtime.py, worker]
+    secrets: [db_password]
+    volumes: [demo_state:/state]
+    depends_on:
+      api: {condition: service_healthy}
+  web:
+    build: .
+    command: [node, scripts/demo_gateway.mjs]
+    environment:
+      DEMO_CONTAINER: "1"
+      WORKBENCH_UI_TOKEN_FILE: /state/api.token
+      WORKBENCH_UI_API_ORIGIN: http://api:8911
+      WORKBENCH_UI_PORT: "8912"
+    volumes: [demo_state:/state:ro]
+    ports: ["127.0.0.1:8912:8912"]
+    depends_on:
+      api: {condition: service_healthy}
+secrets:
+  db_password:
+    file: ${DEMO_CONTAINER_STATE:?prepare an external credential directory}/db-password
+volumes:
+  demo_pg: {}
+  demo_state: {}
