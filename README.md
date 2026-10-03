@@ -1,5 +1,7 @@
 # Traceable Analysis Workbench
 
+**English** | [简体中文](README.zh-CN.md)
+
 A local analysis workbench that binds an agent to versioned instructions and tools, archives evidence, and checks the structured facts in its reports.
 
 ```mermaid
@@ -53,9 +55,13 @@ If a provider key is configured and `DEMO_REAL_CONFIG` points to an explicit mod
 
 ## Demo
 
-![A published synthetic report with validation scope above its title](docs/release/media/report.png)
+[English translation](docs/release/media/report.en.png) | [中文原始截图 / Original Chinese screenshot](docs/release/media/report.png)
 
-[Watch the local interface demonstration](docs/release/media/demo.mp4). It shows configuration, task creation, execution, report inspection, comparison and the evaluation empty state. All displayed data is synthetic; fixture telemetry must not be read as model performance.
+![English translation of a published synthetic report with validation scope above its title](docs/release/media/report.en.png)
+
+This is an AI-translated documentation image of the original screenshot. The application UI is currently Chinese; English UI localization is not implemented.
+
+[Watch the local interface demonstration (Chinese UI)](docs/release/media/demo.mp4). It shows configuration, task creation, execution, report inspection, comparison and the evaluation empty state. All displayed data is synthetic; fixture telemetry must not be read as model performance.
 
 ## Evaluation results
 

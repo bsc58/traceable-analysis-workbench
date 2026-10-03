@@ -7,7 +7,9 @@
   "files": {
     ".gitignore": "4f30d85c374e3a786cf26e302342b3d49748f8a1deba0d696092c9d3b0f911c3",
     "Dockerfile": "ba12bed1dc3edabfd2c320b3fef77ad488fa2f19f604f83049b578b8d807f2fc",
-    "README.md": "e9b7a06bd3ee0ccdfc754df0fcecd0dfa3741440b2c5406a604e288e2b0cb69c",
+    "LICENSE": "76bf4e73516761de4b335af721649e1eeeb15cc2e9cd031e52f3c4de9d96712c",
+    "README.md": "d3d134979309409ce67832fe7e9a43b8f4ea76a091582e1c7b8e3c7114f506d8",
+    "README.zh-CN.md": "bc86c3a6f59cd225147dcd275b5520ca0ebc8c283b297236c1a2203e5021db00",
     "apps/web/.gitignore": "fba71034809d6f6199ac1400621508f1d219642b160f1a3109265b7ccab88d7d",
     "apps/web/e2e/fixture_support.py": "44accbbd88d2ecd63ee9aadfdfed294846d4decb879dc9fe0b6f782e1d7c0044",
     "apps/web/e2e/serve_fixture.py": "e0434b8ca0cd002ff8833ae913b7477405c15ec04576cd29d804c0e22e4c7891",
@@ -27,9 +29,10 @@
     "apps/web/vite.config.ts": "8ad9ff842ecdd4b948f353d1901f7d8acfc4dfb0993c2cef45d594fa94f12cf0",
     "docker-compose.yml": "3f6c327b49d5d82cddab4b4e34a42788700f75ce430657a80e4a37d054e2053d",
     "docs/release/DEMO.md": "ec82aba6715d8b8e512788029d07630d1b06794d30b1546f7db390c1e2e053b2",
-    "docs/release/RELEASING.md": "88f6be16ff3d0129cfd797907c215c7e2e0fcd83ce45e21a27f35d9f2f6896e5",
+    "docs/release/RELEASING.md": "7fd9d6758654601aaf603759e5c9995c16c86a9a5cbafc6c9c1daa17f7057b08",
     "docs/release/VERIFICATION.md": "36ca2fe747a5d7eba851cc901c5ecb06d3916fcffb762754a2994b33ab196f12",
     "docs/release/media/demo.mp4": "214eea3080dd99eeb8ea9d0f9907062586522b4062383bb7da3d912c0283bf58",
+    "docs/release/media/report.en.png": "30fa36fd61ae01106d19c16bd1f7733cac36e35279cf1c68543dbe38507cb262",
     "docs/release/media/report.png": "5618e0646bbe9e5f516a92eb8d4c84b83c5696a2bdbe1164f9f935874f269c7a",
     "eval/b2/generate.py": "a852ed7ea68466e5a32cfdcca5e8fc858d98c8e369a2c82df1ec6ae0bc87fb76",
     "eval/b2/grader.py": "32d81f6a9b77c98b0474fca6c9fec43dbbca3aaab78fdb44b5b270e42cc5db99",
@@ -133,8 +136,7 @@
     "tests/test_reconciliation.py": "08ec0afe7736782d86dea907a631ad8fbb9a10a0727938405b50ef4c7bc46ebf",
     "tests/test_runtime.py": "f683f85b479580162170b6e7d928f5e3f0ccb8912a069f522aa358803d6b6449",
     "tests/test_terminal_and_report_budget.py": "bc37905bff75f20f166a48ba022d9c7cd80b9892bfa28ccc182a6f273327109d",
-    "tests/test_test_safety.py": "76bf4d145efe2a9e0cfdcbd7eddeb43cfc5563c1abcb11996c4440394cddc871",
-    "LICENSE": "76bf4e73516761de4b335af721649e1eeeb15cc2e9cd031e52f3c4de9d96712c"
+    "tests/test_test_safety.py": "76bf4d145efe2a9e0cfdcbd7eddeb43cfc5563c1abcb11996c4440394cddc871"
   },
   "license": "MIT"
 }

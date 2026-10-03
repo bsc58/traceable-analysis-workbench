@@ -20,3 +20,9 @@ The repository check in the unchanged scanner's `--git` mode still expects the o
 For the never-pushed, single-commit candidate, replace the initial commit only after reviewing the exact staged files. Keep the repository at one root commit with no remote. Record every selected file hash, the generated manifest hash, the authenticated identity, and the resulting commit in the publish checklist outside the release directory. Confirm each copied file matches its development source byte for byte; `PUBLIC_MANIFEST.json` is generated release metadata and does not hash itself.
 
 No database, hidden answer file, credential, dependency installation, or development evidence belongs in the release. Do not add a remote, create a hosted repository, or push during this preparation step.
+
+## Documentation updates after publication
+
+Once the repository is published, preserve its history and use normal follow-up commits. Push only the public release checkout. The initial single-root-commit and no-remote checks above apply to the original, never-pushed candidate, not subsequent updates. Verify the current authenticated owner, expected remote, clean state and pushed commit separately from the content scan.
+
+Keep `README.md` (English), `README.zh-CN.md` (Chinese) and both report images in sync with the development source. The original packaging allowlist does not select `README.zh-CN.md`; copy it explicitly, along with the root MIT `LICENSE`, and include their hashes in `PUBLIC_MANIFEST.json`. The English report image is an AI-translated documentation illustration of the original Chinese screenshot, not evidence that English UI localization is implemented. Preserve the original screenshot and label the translation in both READMEs.
